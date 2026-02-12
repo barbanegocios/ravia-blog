@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			.main-inner {
-				max-width: 800px;
+				max-width: 600px;
 				margin: 0 auto;
 				padding: 2em 1em 4em;
 			}
@@ -38,9 +38,19 @@ const posts = (await getCollection('blog')).sort(
 				list-style: none;
 				margin: 0;
 				padding: 0;
-				display: flex;
-				flex-direction: column;
+				display: grid;
+				grid-template-columns: 1fr;
 				gap: 2rem;
+			}
+			@media (min-width: 1300px) {
+				.main-inner {
+					max-width: 1240px;
+				}
+				.post-list {
+					grid-template-columns: repeat(2, 600px);
+					justify-content: center;
+					gap: 2rem;
+				}
 			}
 			.post-card {
 				background: #fff;
@@ -109,8 +119,8 @@ const posts = (await getCollection('blog')).sort(
 							<a href={`/blog/${post.id}/`} class="card-link">
 								{post.data.heroImage && (
 									<Image
-										width={800}
-										height={450}
+										width={600}
+										height={338}
 										src={post.data.heroImage}
 										alt=""
 										class="card-image"
