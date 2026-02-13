@@ -1,15 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
+import Banner from '../components/Banner.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { getCategoryLabel } from '../consts';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
+import { BANNERS, BANNER_PLACEMENTS } from '../data/banners';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const homeBannerIds = new Set(BANNER_PLACEMENTS.home);
+const homeBanners = BANNERS.filter((b) => homeBannerIds.has(b.id));
 ---
 
 <!doctype html>
@@ -103,6 +108,17 @@ const posts = (await getCollection('blog')).sort(
 			.read-more:hover {
 				text-decoration: underline;
 			}
+			.banners-home {
+				margin-bottom: 2rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+			}
+			.banners-home .banner-link {
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: var(--box-shadow);
+			}
 		</style>
 	</head>
 	<body>
@@ -113,6 +129,13 @@ const posts = (await getCollection('blog')).sort(
 					<h1>{SITE_TITLE}</h1>
 					<p class="tagline">{SITE_DESCRIPTION}</p>
 				</div>
+				{homeBanners.length > 0 && (
+					<div class="banners-home">
+						{homeBanners.map((banner) => (
+							<Banner href={banner.link} src={banner.image} />
+						))}
+					</div>
+				)}
 				<ul class="post-list">
 					{posts.map((post, index) => (
 						<li class="post-card">

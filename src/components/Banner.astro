@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	href: string;
+	src: string | import('astro:assets').ImageMetadata;
+	alt?: string;
+}
+
+const { href, src, alt = '' } = Astro.props;
+---
+
+<a href={href} class="banner-link">
+	<Image src={src} alt={alt} class="banner-image" />
+</a>
+
+<style>
+	.banner-link {
+		display: block;
+		text-decoration: none;
+	}
+	.banner-image {
+		width: 100%;
+		height: auto;
+		display: block;
+		vertical-align: middle;
+	}
+</style>
