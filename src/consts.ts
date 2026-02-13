@@ -2,6 +2,7 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Ravia Blog';
+export const SITE_AUTHOR = 'Ravia';
 export const SITE_DESCRIPTION =
 	'Marketing inteligente para quem não tem tempo a perder';
 

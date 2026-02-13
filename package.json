@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate:llms": "node scripts/generate-llms.mjs",
+    "prebuild": "npm run generate:llms"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
