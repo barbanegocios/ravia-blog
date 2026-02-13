@@ -139,7 +139,7 @@ const homeBanners = BANNERS.filter((b) => homeBannerIds.has(b.id));
 				<ul class="post-list">
 					{posts.map((post, index) => (
 						<li class="post-card">
-							<a href={`/blog/${post.id}/`} class="card-link">
+							<a href={`/${post.id}/`} class="card-link">
 								{post.data.heroImage && (
 									<Image
 										width={600}
