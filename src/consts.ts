@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = 'Ravia Blog';
 export const SITE_DESCRIPTION =
-	'Conteúdo sobre marketing, redes sociais, IA e negócios';
+	'Marketing inteligente para quem não tem tempo a perder';
 
 export const CATEGORY_SLUGS = [
 	'marketing-digital',
