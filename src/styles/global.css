@@ -133,6 +133,25 @@ hr {
 	main {
 		padding: 1em;
 	}
+	/* Headings em escala proporcional ao h1 (1.75/3.052 ≈ 0,573) */
+	h1 {
+		font-size: 1.75em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	h3 {
+		font-size: 1.12em;
+	}
+	h4 {
+		font-size: 0.9em;
+	}
+	h5 {
+		font-size: 0.72em;
+	}
+	h6 {
+		font-size: 0.57em;
+	}
 }
 
 .sr-only {
