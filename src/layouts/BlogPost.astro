@@ -26,9 +26,13 @@ const { title, description, heroImage, category } = Astro.props;
 				background: #f9fafb;
 			}
 			.hero-image {
-				width: 100%;
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
 			}
 			.hero-image img {
+				width: 100%;
+				height: auto;
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
@@ -93,8 +97,8 @@ const { title, description, heroImage, category } = Astro.props;
 				<div class="hero-image">
 					{heroImage && (
 						<Image
-							width={1020}
-							height={510}
+							width={heroImage.width}
+							height={heroImage.height}
 							src={heroImage}
 							alt=""
 						/>
