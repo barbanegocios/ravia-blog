@@ -36,6 +36,11 @@ main {
 	padding: 3em 1em;
 }
 
+main.main-home {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 h1,
 h2,
 h3,
