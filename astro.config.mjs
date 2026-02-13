@@ -11,7 +11,7 @@ import {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://blog.ravia.app',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		rehypePlugins: [
