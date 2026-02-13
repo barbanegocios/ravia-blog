@@ -114,7 +114,7 @@ const posts = (await getCollection('blog')).sort(
 					<p class="tagline">{SITE_DESCRIPTION}</p>
 				</div>
 				<ul class="post-list">
-					{posts.map((post) => (
+					{posts.map((post, index) => (
 						<li class="post-card">
 							<a href={`/blog/${post.id}/`} class="card-link">
 								{post.data.heroImage && (
@@ -124,6 +124,8 @@ const posts = (await getCollection('blog')).sort(
 										src={post.data.heroImage}
 										alt=""
 										class="card-image"
+										loading={index === 0 ? 'eager' : 'lazy'}
+										fetchpriority={index === 0 ? 'high' : 'auto'}
 									/>
 								)}
 								<div class="card-body">

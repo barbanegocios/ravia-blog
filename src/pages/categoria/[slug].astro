@@ -132,7 +132,7 @@ const posts = allPosts
 				</div>
 				{posts.length > 0 ? (
 					<ul class="post-list">
-						{posts.map((post) => (
+						{posts.map((post, index) => (
 							<li class="post-card">
 								<a href={`/blog/${post.id}/`} class="card-link">
 									{post.data.heroImage && (
@@ -142,6 +142,8 @@ const posts = allPosts
 											src={post.data.heroImage}
 											alt=""
 											class="card-image"
+											loading={index === 0 ? 'eager' : 'lazy'}
+											fetchpriority={index === 0 ? 'high' : 'auto'}
 										/>
 									)}
 									<div class="card-body">
