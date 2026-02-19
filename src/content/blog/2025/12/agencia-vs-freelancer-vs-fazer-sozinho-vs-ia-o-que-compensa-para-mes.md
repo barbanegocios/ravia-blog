@@ -60,4 +60,4 @@ Se você já tem um faturamento mais gordo e precisa de estratégia de longo pra
 
 No final das contas, a melhor escolha é aquela que te faz trabalhar menos e lucrar mais. Que te dá tempo para focar no que realmente importa: atender bem, vender melhor, crescer o negócio. O resto é ferramenta. E ferramentas existem para facilitar sua vida, não para complicar.
 
-_**Cansou de escolher entre caro, demorado ou improvisado? A Ravia entrega trabalho pronto em minutos e com qualidade profissional. Teste grátis e veja como é ter uma equipe completa sem contratar ninguém.** **[Comece seu teste grátis agora](https://ravia.app/[cta_utm])!**_
+_**Cansou de escolher entre caro, demorado ou improvisado? O PostCreator entrega posts para Instagram prontos em minutos, com IA. Teste grátis e veja como é criar conteúdo de qualidade sem contratar ninguém.** **[Comece seu teste grátis agora](https://ravia.app/[cta_utm])!**_

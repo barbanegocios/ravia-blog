@@ -72,4 +72,4 @@ Terceirize o suporte técnico ou contrate alguém dedicado para essa função. E
 
 Delegar e automatizar não é preguiça, é estratégia. Cada tarefa operacional que você remove da sua rotina libera espaço mental para decisões que realmente impactam o crescimento da empresa. O tempo recuperado pode ser investido em planejamento, relacionamento com clientes estratégicos ou desenvolvimento de novos produtos.
 
-_**A Ravia ajuda você a automatizar processos e recuperar o controle do seu tempo. [Faça seu teste grátis](https://ravia.app/[cta_utm]) e veja como a tecnologia pode transformar a gestão do seu negócio!**_
+_**O PostCreator ajuda você a automatizar a criação de posts para Instagram com IA e recuperar o controle do seu tempo. [Faça seu teste grátis](https://ravia.app/[cta_utm]) e veja como a tecnologia pode transformar a gestão do seu negócio!**_

@@ -92,4 +92,4 @@ Implemente sistemas e processos que reduzam sua dependência operacional na empr
 
 O burnout do empreendedor é um sinal de que você precisa repensar sua relação com o trabalho. Reconhecer os sintomas e agir rapidamente pode salvar sua saúde e seu negócio. Buscar ajuda profissional e implementar mudanças concretas na rotina não é fraqueza, mas inteligência estratégica.
 
-[**_Automatize processos e recupere seu tempo com a Ravia. Teste gratuitamente e descubra como nossa plataforma pode reduzir sua sobrecarga operacional._**](https://ravia.app/[cta_utm])
+[**_Automatize a criação de posts para Instagram com IA e recupere seu tempo com o PostCreator. Teste gratuitamente e descubra como nossa plataforma pode reduzir sua sobrecarga operacional._**](https://ravia.app/[cta_utm])

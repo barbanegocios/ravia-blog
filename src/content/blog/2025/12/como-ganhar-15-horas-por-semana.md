@@ -44,4 +44,4 @@ Ao reduzir o tempo médio de cada reunião em 30% e eliminar encontros desnecess
 
 Recuperar 15 horas por semana não é uma promessa exagerada, é o resultado natural de aplicar estratégias inteligentes de automação e uso de IA no dia a dia do seu negócio. O futuro dos negócios não está em trabalhar mais horas, mas em trabalhar de forma mais inteligente.
 
-_**Tenha acesso a uma equipe completa de IA trabalhando para você 24/7, sem burocracia de contratação ou custos com folha de pagamento. [Comece seu teste grátis da Ravia](https://ravia.app/[cta_utm]) e transforme sua produtividade já nesta semana!**_
+_**Automatize a criação de posts para Instagram com IA, sem burocracia de contratação ou custos com folha de pagamento. [Comece seu teste grátis da Ravia](https://ravia.app/[cta_utm]) e transforme sua produtividade já nesta semana!**_

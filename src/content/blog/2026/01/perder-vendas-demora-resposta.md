@@ -76,4 +76,4 @@ Implemente pontuação de leads para priorizar contatos quentes. Quem visitou a 
 
 Perder vendas por demora na resposta custa mais do que você imagina. Cada lead ignorado representa investimento desperdiçado e receita que foi para a concorrência. A solução está em processos claros, automação inteligente e ferramentas que priorizem velocidade sem sacrificar qualidade.
 
-Teste gratuitamente a [Ravia](https://ravia.app) e responda seus leads com mais confiança e velocidade. Nossa plataforma oferece diversos assistentes inteligentes que ajudam sua equipe a vender mais em cada interação.
+Teste gratuitamente o [Ravia](https://ravia.app) e automatize a criação de posts para Instagram com IA. Nossa plataforma ajuda você a manter presença digital sem perder tempo com conteúdo.
