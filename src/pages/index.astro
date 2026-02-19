@@ -14,7 +14,10 @@ const posts = (await getCollection('blog')).sort(
 );
 
 const homeBannerIds = new Set(BANNER_PLACEMENTS.home);
-const homeBanners = BANNERS.filter((b) => homeBannerIds.has(b.id));
+const homeBanners = BANNERS.filter(
+	(b): b is typeof b & { image: import('astro:assets').ImageMetadata } =>
+		homeBannerIds.has(b.id) && 'image' in b && b.image != null
+);
 ---
 
 <!doctype html>

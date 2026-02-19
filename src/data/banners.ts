@@ -1,7 +1,4 @@
 import bannerTop from '../assets/banners/banner_top.jpg';
-import bannerMiddle1 from '../assets/banners/banner_middle-1.jpg';
-import bannerMiddle2 from '../assets/banners/banner_middle-2.jpg';
-import bannerMiddle3 from '../assets/banners/banner_middle-3.jpg';
 
 export const BANNERS = [
 	{
@@ -9,20 +6,20 @@ export const BANNERS = [
 		image: bannerTop,
 		link: 'https://ravia.app/?utm_source=blog&utm_campaign=cadastro&utm_medium=home&utm_content=org&utm_term=banner-top',
 	},
+	/** Banners inline: imagens ficam só em public/ (rehype injeta HTML com URL pública) */
 	{
 		id: 'banner_inline_1',
-		image: bannerMiddle1,
-		/** Resolvido no cliente: [banner_inline_utm] vira UTMs + utm_term = slug do post */
+		imagePublicPath: '/banner_middle-1.jpg',
 		link: 'https://ravia.app/[banner_inline_utm]',
 	},
 	{
 		id: 'banner_inline_2',
-		image: bannerMiddle2,
+		imagePublicPath: '/banner_middle-2.jpg',
 		link: 'https://ravia.app/[banner_inline_utm]',
 	},
 	{
 		id: 'banner_inline_3',
-		image: bannerMiddle3,
+		imagePublicPath: '/banner_middle-3.jpg',
 		link: 'https://ravia.app/[banner_inline_utm]',
 	},
 ] as const;
@@ -42,10 +39,11 @@ export const BANNER_PLACEMENTS = {
 export function getBannerMap(): Record<string, { href: string; src: string }> {
 	const map: Record<string, { href: string; src: string }> = {};
 	for (const b of BANNERS) {
-		map[b.id] = {
-			href: b.link,
-			src: typeof b.image === 'string' ? b.image : (b.image as { src: string }).src,
-		};
+		const entry = b as (typeof BANNERS)[number] & { imagePublicPath?: string; image?: { src: string } | string };
+		const src =
+			entry.imagePublicPath ??
+			(typeof entry.image === 'string' ? entry.image : entry.image?.src ?? '');
+		map[b.id] = { href: b.link, src };
 	}
 	return map;
 }
