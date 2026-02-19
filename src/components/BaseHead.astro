@@ -20,6 +20,21 @@ const googleFontsUrl =
 	'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600&display=swap';
 ---
 
+<!-- Tema: segue o sistema (prefers-color-scheme); override via localStorage 'theme' = 'light' | 'dark' -->
+<script is:inline>
+	(function () {
+		var stored = localStorage.getItem('theme');
+		var theme = (stored === 'light' || stored === 'dark')
+			? stored
+			: (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		document.documentElement.setAttribute('data-theme', theme);
+		if (!stored) {
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+				document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+			});
+		}
+	})();
+</script>
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
