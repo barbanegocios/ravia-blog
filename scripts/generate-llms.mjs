@@ -5,6 +5,82 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
+/** Parse UTM_GROUPS from src/data/utm.ts (group name -> { utm_source, utm_medium, utm_campaign, utm_content }). */
+function readUtmGroups() {
+	const utmPath = path.join(ROOT, 'src', 'data', 'utm.ts');
+	let content = fs.readFileSync(utmPath, 'utf-8');
+	content = content.replace(/\/\*\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
+	const startMarker = 'UTM_GROUPS';
+	const startIdx = content.indexOf(startMarker);
+	if (startIdx === -1) return {};
+	const objStart = content.indexOf('{', startIdx);
+	if (objStart === -1) return {};
+	let depth = 1;
+	let pos = objStart + 1;
+	while (pos < content.length && depth > 0) {
+		const ch = content[pos];
+		if (ch === '{') depth++;
+		else if (ch === '}') depth--;
+		pos++;
+	}
+	const objStr = content.slice(objStart, pos);
+	const groups = {};
+	const groupRegex = /(\w+)\s*:\s*\{/g;
+	let m;
+	while ((m = groupRegex.exec(objStr)) !== null) {
+		const groupName = m[1];
+		const innerStart = m.index + m[0].length;
+		let innerDepth = 1;
+		let innerEnd = innerStart;
+		while (innerEnd < objStr.length && innerDepth > 0) {
+			const c = objStr[innerEnd];
+			if (c === '{') innerDepth++;
+			else if (c === '}') innerDepth--;
+			innerEnd++;
+		}
+		const inner = objStr.slice(innerStart, innerEnd - 1);
+		const source = inner.match(/utm_source\s*:\s*['"]([^'"]+)['"]/);
+		const medium = inner.match(/utm_medium\s*:\s*['"]([^'"]+)['"]/);
+		const campaign = inner.match(/utm_campaign\s*:\s*['"]([^'"]+)['"]/);
+		const contentVal = inner.match(/utm_content\s*:\s*['"]([^'"]+)['"]/);
+		if (source && medium && campaign && contentVal) {
+			groups[groupName] = {
+				utm_source: source[1],
+				utm_medium: medium[1],
+				utm_campaign: campaign[1],
+				utm_content: contentVal[1],
+			};
+		}
+	}
+	return groups;
+}
+
+/**
+ * Replace URLs containing [groupName] with the full UTM URL (params + utm_term=slug).
+ * Matches markdown links ](url) and bare URLs.
+ */
+function expandUtmLinksInBody(body, slug, utmGroups) {
+	const groupNames = Object.keys(utmGroups);
+	if (groupNames.length === 0) return body;
+	// Match URL (in or out of markdown) that contains [groupName]
+	const placeholderRegex = new RegExp(
+		'(https?://[^\\s\\]\\)"]*)\\[(' + groupNames.join('|') + ')\\]([^\\s\\]\\)"]*)',
+		'g'
+	);
+	return body.replace(placeholderRegex, (match, prefix, groupName, suffix) => {
+		const group = utmGroups[groupName];
+		if (!group) return match;
+		const base = prefix + suffix;
+		const url = new URL(base.startsWith('http') ? base : 'https://example.com/' + base);
+		url.searchParams.set('utm_source', group.utm_source);
+		url.searchParams.set('utm_medium', group.utm_medium);
+		url.searchParams.set('utm_campaign', group.utm_campaign);
+		url.searchParams.set('utm_content', group.utm_content);
+		url.searchParams.set('utm_term', slug);
+		return url.toString();
+	});
+}
+
 function matchConst(raw, name) {
 	const regex = new RegExp(
 		`export\\s+const\\s+${name}\\s*=\\s*['"\`]([^'"\`]*)['"\`]`,
@@ -60,6 +136,7 @@ function parsePost(filePath) {
 }
 
 const siteMeta = readSiteMeta();
+const utmGroups = readUtmGroups();
 const contentDir = path.join(ROOT, 'src', 'content', 'blog');
 const relativeFiles = collectMdFiles(contentDir);
 
@@ -84,11 +161,13 @@ const header = [
 	'',
 	`Generated on ${new Date().toISOString()}`,
 	'Contains the markdown content of each blog post.',
+'UTM placeholders in links (e.g. [cta_utm]) are expanded to full URLs with utm_term = post slug.',
 ].join('\n');
 
-const postBlocks = sections.map(
-	(s) => [`## ${s.title}`, `Slug: ${s.slug}`, '', s.body].join('\n')
-);
+const postBlocks = sections.map((s) => {
+	const bodyExpanded = expandUtmLinksInBody(s.body, s.slug, utmGroups);
+	return [`## ${s.title}`, `Slug: ${s.slug}`, '', bodyExpanded].join('\n');
+});
 
 const output = [header, ...postBlocks].join('\n\n---\n\n');
 
