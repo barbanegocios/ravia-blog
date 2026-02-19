@@ -6,6 +6,12 @@ export const BANNERS = [
 		image: bannerTop,
 		link: 'https://ravia.app/?utm_source=blog&utm_campaign=trial&utm_medium=org&utm_content=home&utm_term=banner-top',
 	},
+	{
+		id: 'banner_inline',
+		image: bannerTop,
+		/** Resolvido no cliente: [banner_inline_utm] vira UTMs + utm_term = slug do post */
+		link: 'https://ravia.app/[banner_inline_utm]',
+	},
 ] as const;
 
 export type BannerId = (typeof BANNERS)[number]['id'];
@@ -13,7 +19,7 @@ export type BannerId = (typeof BANNERS)[number]['id'];
 export const BANNER_PLACEMENTS = {
 	home: ['banner_top'] as const,
 	inArticle: [
-		{ afterParagraph: 2, bannerId: 'banner_top' as BannerId }
+		{ afterParagraph: 2, bannerId: 'banner_inline' as BannerId }
 	],
 };
 

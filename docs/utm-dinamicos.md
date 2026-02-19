@@ -12,7 +12,7 @@ O sistema permite:
 
 Assim, o autor escreve uma única convenção no markdown (ex.: `https://ravia.app/[cta_utm]`) e, quando o leitor abre a página do post, o link é resolvido no navegador com todos os parâmetros UTM corretos, incluindo o slug naquele post.
 
-**Escopo:** a funcionalidade vale apenas para **links dentro do corpo do post** (conteúdo em markdown). Banners e CTA do header não usam este sistema.
+**Escopo:** a funcionalidade vale para **links dentro do corpo do post** (conteúdo em markdown) e para **links dos banners in-article** (configurados em `src/data/banners.ts`). Banners da home e CTA do header não usam este sistema.
 
 ---
 
@@ -137,8 +137,10 @@ Não é necessário alterar o script de resolução: ele percorre todos os grupo
 
 ## Onde a funcionalidade se aplica
 
-- **Aplica-se:** Links no **corpo do post** (markdown em `src/content/blog/**/*.md`). O script só atua sobre links dentro do container `.prose` na página do post.
-- **Não se aplica (neste escopo):** Banners (in-article e home), CTA do header e qualquer link fora do conteúdo do post. Esses continuam com seus links normais, sem placeholder de grupo UTM.
+- **Aplica-se:**
+  - Links no **corpo do post** (markdown em `src/content/blog/**/*.md`).
+  - Links dos **banners in-article** (definidos em `src/data/banners.ts` com `link` contendo um placeholder, ex.: `https://ravia.app/[banner_inline_utm]`). O banner é injetado pelo rehype dentro do conteúdo do post, então o script que atua em `.prose` resolve o link e preenche `utm_term` com o slug daquele post.
+- **Não se aplica:** Banners da **home** e CTA do **header** (links fixos, sem placeholder). Páginas de categoria não incluem o script.
 
 O script de resolução é incluído apenas no layout da página do post (`BlogPost.astro`), não na home nem nas páginas de categoria.
 

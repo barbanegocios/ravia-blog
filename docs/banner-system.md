@@ -76,6 +76,18 @@ inArticle: [
 
 É possível usar o mesmo banner em vários parágrafos ou banners diferentes em parágrafos diferentes. A regra vale para **todos os artigos** do blog (não há configuração por post).
 
+#### UTM dinâmico (slug do artigo) em banners in-article
+
+Para banners que aparecem **dentro dos artigos**, você pode usar um **placeholder de grupo UTM** no `link`. Na hora em que o leitor abre o post, o link do banner é resolvido no navegador e ganha `utm_term` = slug daquele artigo (ex.: no post `/burnout-empreendedor/`, o link fica com `utm_term=burnout-empreendedor`).
+
+Em `src/data/banners.ts`, use no `link` um grupo definido em `src/data/utm.ts`, por exemplo:
+
+```ts
+{ id: 'banner_inline', image: bannerTop, link: 'https://ravia.app/[banner_inline_utm]' },
+```
+
+O grupo `banner_inline_utm` (ou o que você definir em `utm.ts`) deve ter `utm_source`, `utm_medium`, `utm_campaign` e `utm_content`; o `utm_term` é sempre preenchido com o slug do post. Detalhes em [UTMs dinâmicos nos posts](utm-dinamicos.md).
+
 ---
 
 ## Como funciona (técnico)
