@@ -10,7 +10,7 @@ import authorAvatar from '../assets/daniel-sao-pedro.jpg';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, heroImage, category, author } = Astro.props;
+const { title, description, heroImage, category, author, pubDate, updatedDate } = Astro.props;
 ---
 
 <html lang="pt-BR">
@@ -19,6 +19,9 @@ const { title, description, heroImage, category, author } = Astro.props;
 			title={title}
 			description={description}
 			image={heroImage}
+			author={author}
+			pubDate={pubDate}
+			updatedDate={updatedDate}
 		/>
 		<style>
 			main {
