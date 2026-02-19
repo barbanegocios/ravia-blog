@@ -3,6 +3,7 @@ title: 'O custo operacional real de fazer tudo sozinho na sua pequena empresa'
 description: 'Você provavelmente já sentiu que o dia deveria ter mais horas. Quando você toca uma pequena empresa sozinho, cada tarefa consome tempo que poderia gerar receita. O custo operacional de pequena empresa vai muito além das contas que você paga todo mês.'
 pubDate: 2026-01-06
 category: negocios
+author: 'Daniel São Pedro'
 heroImage: '../../../../assets/posts/custo-operacional-pequena-empresa-1.jpg'
 ---
 

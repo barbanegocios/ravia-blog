@@ -3,6 +3,7 @@ title: '7 tarefas que todo dono de empresa faz mas não deveria'
 description: 'Todo dono de empresa acorda cedo, trabalha até tarde e ainda sente que o dia não foi produtivo. O problema não é falta de dedicação. O problema é gastar energia resolvendo questões que outras pessoas ou sistemas poderiam resolver melhor.'
 pubDate: 2025-12-17
 category: negocios
+author: 'Daniel São Pedro'
 heroImage: '../../../../assets/posts/tarefas-dono-de-empresa.jpg'
 ---
 

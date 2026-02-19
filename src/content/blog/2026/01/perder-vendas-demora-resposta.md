@@ -3,6 +3,7 @@ title: 'Por que você está perdendo vendas por demora na resposta (e como resol
 description: 'Você investe em marketing para atrair leads. Esses contatos chegam interessados no seu produto. Mas muitos desistem antes mesmo de receber uma resposta da sua equipe.'
 pubDate: 2026-01-07
 category: marketing-digital
+author: 'Daniel São Pedro'
 heroImage: '../../../../assets/posts/perder-vendas-demora-resposta-4.jpg'
 ---
 

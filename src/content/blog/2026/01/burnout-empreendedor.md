@@ -3,6 +3,7 @@ title: 'Burnout do empreendedor: 8 sinais de alerta e como reverter'
 description: 'O burnout do empreendedor é uma realidade silenciosa que afeta milhares de donos de negócio no Brasil. Segundo uma pesquisa da Endeavor, mais de um terço dos empreendedores brasileiros já enfrentou esse tipo de esgotamento.'
 pubDate: 2026-01-07
 category: negocios
+author: 'Daniel São Pedro'
 heroImage: '../../../../assets/posts/burnout-empreendedor-1.jpg'
 ---
 

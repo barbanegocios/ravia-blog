@@ -3,6 +3,7 @@ title: 'Como ganhar 15 horas por semana no seu negócio sem contratar ninguém'
 description: 'Se você é como a maioria dos empreendedores, provavelmente sente que o dia deveria ter mais de 24 horas. A sensação de estar sempre sobrecarregado, pulando de uma tarefa urgente para outra sem conseguir focar no que realmente importa para o crescimento do seu negócio, é frustrante e exaustiva.'
 pubDate: 2025-12-16
 category: inteligencia-artificial
+author: 'Daniel São Pedro'
 heroImage: '../../../../assets/posts/como-ganhar-15-horas-por-semana.jpg'
 ---
 

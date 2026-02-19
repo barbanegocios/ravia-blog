@@ -3,6 +3,7 @@ title: 'Gestão de tempo para microempresa: descubra onde suas 14 horas estão s
 description: 'Você acorda cedo, trabalha até tarde e ainda assim termina o dia com a sensação de que não saiu do lugar. As tarefas se acumulam, os e-mails não param de chagar e você está presente em cada decisão da empresa.'
 pubDate: 2026-01-06
 category: negocios
+author: 'Daniel São Pedro'
 heroImage: '../../../../assets/posts/tempo-desperdicado-1.jpg'
 ---
 

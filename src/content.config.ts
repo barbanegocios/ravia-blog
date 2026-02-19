@@ -15,11 +15,12 @@ const blog = defineCollection({
 			entry.replace(/\.(md|mdx)$/i, '').split('/').pop() ?? entry,
 	}),
 	// Type-check frontmatter using a schema
-	schema: ({ image }) =>
+		schema: ({ image }) =>
 		z.object({
 			title: z.string(),
 			description: z.string(),
 			category: categoryEnum,
+			author: z.string(),
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),

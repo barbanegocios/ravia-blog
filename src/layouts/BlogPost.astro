@@ -6,10 +6,11 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import UtmResolver from '../components/UtmResolver.astro';
 import { getCategoryLabel } from '../consts';
+import authorAvatar from '../assets/daniel-sao-pedro.jpg';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, heroImage, category } = Astro.props;
+const { title, description, heroImage, category, author } = Astro.props;
 ---
 
 <html lang="pt-BR">
@@ -88,6 +89,22 @@ const { title, description, heroImage, category } = Astro.props;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
+			.author-credit {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				margin-top: 0.75rem;
+				padding-top: 0.75rem;
+				border-top: 1px solid rgb(var(--gray) / 0.2);
+				color: rgb(var(--gray));
+				font-size: 0.8125rem;
+			}
+			.author-credit img {
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
 		</style>
 	</head>
 
@@ -113,6 +130,18 @@ const { title, description, heroImage, category } = Astro.props;
 							</a>
 						</div>
 						<h1>{title}</h1>
+						{author && (
+							<div class="author-credit">
+								<Image
+									width={28}
+									height={28}
+									src={authorAvatar}
+									alt=""
+									aria-hidden="true"
+								/>
+								<span>{author}</span>
+							</div>
+						)}
 						<hr />
 					</div>
 					<slot />
