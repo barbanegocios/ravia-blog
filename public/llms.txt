@@ -2,7 +2,7 @@ Ravia Blog
 Ravia
 Marketing inteligente para quem não tem tempo a perder
 
-Generated on 2026-02-19T19:57:38.037Z
+Generated on 2026-02-19T20:19:39.658Z
 Contains the markdown content of each blog post.
 
 ---
@@ -18,7 +18,7 @@ Este artigo apresenta 8 sinais de alerta do burnout e estratégias práticas par
 
 ## 8 Sinais de Alerta do Burnout do Empreendedor
 
-![](../../../../assets/burnout-empreendedor-3.jpg)
+![](../../../../assets/posts/burnout-empreendedor-3.jpg)
 
 ### **1\. Cansaço que não passa mesmo após descanso**
 
@@ -56,7 +56,7 @@ O burnout do empreendedor apaga a chama que sustentava o negócio. Reconhecer a 
 
 Dores de cabeça frequentes, problemas digestivos e tensão muscular constante surgem sem explicação médica. Seu corpo está sinalizando que algo não vai bem. Exames não identificam doenças, mas os sintomas persistem.
 
-![](../../../../assets/burnout-empreendedor-4.jpg)
+![](../../../../assets/posts/burnout-empreendedor-4.jpg)
 
 O estresse crônico do burnout se manifesta fisicamente de diversas formas. Seu sistema imunológico enfraquece e você adoece com mais frequência. O corpo está pedindo uma pausa que você não dá.
 
@@ -119,7 +119,7 @@ Estudos mostram que leads contatados em até 5 minutos têm 21 vezes mais chance
 
 Enquanto você demora, a concorrência age. Empresas que respondem rapidamente capturam oportunidades que eram suas. O lead não é mais paciente porque tem dezenas de alternativas a um clique de distância.
 
-![](../../../../assets/perder-vendas-demora-resposta-3.jpg)
+![](../../../../assets/posts/perder-vendas-demora-resposta-3.jpg)
 
 O custo dessa demora vai além da venda perdida. Você desperdiçou o investimento em anúncios, landing pages e toda a jornada até aquele contato. Cada lead ignorado representa dinheiro jogado fora sem retorno.
 
@@ -135,7 +135,7 @@ Equipes pequenas tentam fazer tudo manualmente. O vendedor precisa checar múlti
 
 Sem ferramentas adequadas, não há como identificar leads quentes. Todos os contatos entram na mesma fila, independente do nível de interesse. Quem estava pronto para comprar espera tanto quanto quem só pediu informações básicas.
 
-![](../../../../assets/perder-vendas-demora-resposta-1.jpg)
+![](../../../../assets/posts/perder-vendas-demora-resposta-1.jpg)
 
 A sobrecarga da equipe agrava o problema. Vendedores atendem clientes atuais, fazem follow-ups e ainda precisam prospectar. Leads novos ficam para depois porque não há tempo nem sistema para priorizá-los.
 
@@ -153,7 +153,7 @@ Respostas automáticas podem incluir informações básicas sobre o próximo pas
 
 A automação não substitui o atendimento humano. Ela apenas ganha tempo para que sua equipe responda de forma mais estratégica. O primeiro contato rápido evita que o lead procure a concorrência.
 
-![](../../../../assets/perder-vendas-demora-resposta-2.jpg)
+![](../../../../assets/posts/perder-vendas-demora-resposta-2.jpg)
 
 ### **2\. Definição de SLA de atendimento**
 
@@ -202,7 +202,7 @@ Calcule quanto você precisa faturar por hora para atingir sua meta mensal. Divi
 
 Se você precisa faturar R$ 10.000 por mês e tem 160 horas úteis, cada hora vale R$ 62,50. Passar 20 horas mensais organizando documentos custa R$ 1.250 em oportunidade perdida. Esse dinheiro poderia estar no caixa se você focasse em atividades geradoras de receita.
 
-![](../../../../assets/custo-operacional-pequena-empresa-4.jpg)
+![](../../../../assets/posts/custo-operacional-pequena-empresa-4.jpg)
 
 A maioria dos empreendedores gasta entre 30% e 50% do tempo em tarefas que não geram vendas. Isso representa milhares de reais mensais que evaporam sem você perceber. Mensurar esse custo é o primeiro passo para recuperar rentabilidade.
 
@@ -232,7 +232,7 @@ Processos administrativos mal estruturados criam retrabalho constante. Você ref
 
 Centralizar informações em um sistema único elimina 70% desse tempo desperdiçado. Você acessa dados em segundos e toma decisões com agilidade. A economia de tempo se converte diretamente em capacidade de crescimento.
 
-![](../../../../assets/custo-operacional-pequena-empresa-3.jpg)
+![](../../../../assets/posts/custo-operacional-pequena-empresa-3.jpg)
 
 **Controle de estoque e fornecedores**
 
@@ -283,7 +283,7 @@ Esse comportamento não nasceu da desconfiança, mas da crença de que fazer voc
 
 O microgerenciamento também enfraquece sua equipe. As pessoas param de desenvolver autonomia porque sabem que você vai interferir de qualquer forma. Com o tempo, você cria uma dependência que torna impossível se desconectar do operacional, mesmo quando o negócio precisa que você esteja pensando no estratégico.
 
-![](../../../../assets/tempo-desperdicado-3.jpg)
+![](../../../../assets/posts/tempo-desperdicado-3.jpg)
 
 ### 2\. Falta de processos
 
@@ -319,7 +319,7 @@ Atividades de baixo impacto são aquelas que poderiam ser eliminadas, automatiza
 
 Depois de classificar, calcule quanto tempo você está dedicando a cada nível. Se mais de 60% do seu dia está em atividades de médio ou baixo impacto, você encontrou o motivo de trabalhar tanto e avançar tão pouco. A partir daqui, cada decisão sobre sua rotina deve aumentar o percentual de tempo dedicado ao que realmente move o negócio.
 
-![](../../../../assets/tempo-desperdicado-2.jpg)
+![](../../../../assets/posts/tempo-desperdicado-2.jpg)
 
 ### Passo 2: Identificar padrões de desperdício
 

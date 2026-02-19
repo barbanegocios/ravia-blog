@@ -3,7 +3,7 @@ title: 'Burnout do empreendedor: 8 sinais de alerta e como reverter'
 description: 'O burnout do empreendedor é uma realidade silenciosa que afeta milhares de donos de negócio no Brasil. Segundo uma pesquisa da Endeavor, mais de um terço dos empreendedores brasileiros já enfrentou esse tipo de esgotamento.'
 pubDate: 2026-01-07
 category: negocios
-heroImage: '../../../../assets/burnout-empreendedor-1.jpg'
+heroImage: '../../../../assets/posts/burnout-empreendedor-1.jpg'
 ---
 
 O burnout do empreendedor é uma realidade silenciosa que afeta milhares de donos de negócio no Brasil. Segundo uma pesquisa da Endeavor, mais de um terço dos empreendedores brasileiros já enfrentou esse tipo de esgotamento. O dado revela que o problema vai além de casos isolados.
@@ -14,7 +14,7 @@ Este artigo apresenta 8 sinais de alerta do burnout e estratégias práticas par
 
 ## 8 Sinais de Alerta do Burnout do Empreendedor
 
-![](../../../../assets/burnout-empreendedor-3.jpg)
+![](../../../../assets/posts/burnout-empreendedor-3.jpg)
 
 ### **1\. Cansaço que não passa mesmo após descanso**
 
@@ -52,7 +52,7 @@ O burnout do empreendedor apaga a chama que sustentava o negócio. Reconhecer a 
 
 Dores de cabeça frequentes, problemas digestivos e tensão muscular constante surgem sem explicação médica. Seu corpo está sinalizando que algo não vai bem. Exames não identificam doenças, mas os sintomas persistem.
 
-![](../../../../assets/burnout-empreendedor-4.jpg)
+![](../../../../assets/posts/burnout-empreendedor-4.jpg)
 
 O estresse crônico do burnout se manifesta fisicamente de diversas formas. Seu sistema imunológico enfraquece e você adoece com mais frequência. O corpo está pedindo uma pausa que você não dá.
 

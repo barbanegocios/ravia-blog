@@ -3,7 +3,7 @@ title: 'O custo operacional real de fazer tudo sozinho na sua pequena empresa'
 description: 'Você provavelmente já sentiu que o dia deveria ter mais horas. Quando você toca uma pequena empresa sozinho, cada tarefa consome tempo que poderia gerar receita. O custo operacional de pequena empresa vai muito além das contas que você paga todo mês.'
 pubDate: 2026-01-06
 category: negocios
-heroImage: '../../../../assets/custo-operacional-pequena-empresa-1.jpg'
+heroImage: '../../../../assets/posts/custo-operacional-pequena-empresa-1.jpg'
 ---
 
 Você provavelmente já sentiu que o dia deveria ter mais horas. Quando você toca uma pequena empresa sozinho, cada tarefa consome tempo que poderia gerar receita. O custo operacional de pequena empresa vai muito além das contas que você paga todo mês.
@@ -28,7 +28,7 @@ Calcule quanto você precisa faturar por hora para atingir sua meta mensal. Divi
 
 Se você precisa faturar R$ 10.000 por mês e tem 160 horas úteis, cada hora vale R$ 62,50. Passar 20 horas mensais organizando documentos custa R$ 1.250 em oportunidade perdida. Esse dinheiro poderia estar no caixa se você focasse em atividades geradoras de receita.
 
-![](../../../../assets/custo-operacional-pequena-empresa-4.jpg)
+![](../../../../assets/posts/custo-operacional-pequena-empresa-4.jpg)
 
 A maioria dos empreendedores gasta entre 30% e 50% do tempo em tarefas que não geram vendas. Isso representa milhares de reais mensais que evaporam sem você perceber. Mensurar esse custo é o primeiro passo para recuperar rentabilidade.
 
@@ -58,7 +58,7 @@ Processos administrativos mal estruturados criam retrabalho constante. Você ref
 
 Centralizar informações em um sistema único elimina 70% desse tempo desperdiçado. Você acessa dados em segundos e toma decisões com agilidade. A economia de tempo se converte diretamente em capacidade de crescimento.
 
-![](../../../../assets/custo-operacional-pequena-empresa-3.jpg)
+![](../../../../assets/posts/custo-operacional-pequena-empresa-3.jpg)
 
 **Controle de estoque e fornecedores**
 

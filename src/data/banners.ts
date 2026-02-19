@@ -1,7 +1,7 @@
-import bannerTop from '../assets/banner_top.jpg';
-import bannerMiddle1 from '../assets/banner_middle-1.jpg';
-import bannerMiddle2 from '../assets/banner_middle-2.jpg';
-import bannerMiddle3 from '../assets/banner_middle-3.jpg';
+import bannerTop from '../assets/banners/banner_top.jpg';
+import bannerMiddle1 from '../assets/banners/banner_middle-1.jpg';
+import bannerMiddle2 from '../assets/banners/banner_middle-2.jpg';
+import bannerMiddle3 from '../assets/banners/banner_middle-3.jpg';
 
 export const BANNERS = [
 	{

@@ -3,7 +3,7 @@ title: 'Agência vs. Freelancer vs. Fazer sozinho vs. IA: o que compensa para ME
 description: 'Você já deve ter passado por isso: precisa de um post para o Instagram, um contrato, uma resposta para aquele lead importante. Aí bate a dúvida: faço sozinho e levo horas? Contrato um freelancer e torço para entregar no prazo?'
 pubDate: 2025-12-08
 category: negocios
-heroImage: '../../../../assets/agencia-vs-freelancer.jpg'
+heroImage: '../../../../assets/posts/agencia-vs-freelancer.jpg'
 ---
 
 Você já deve ter passado por isso: precisa de um post para o Instagram, um contrato, uma resposta para aquele lead importante. Aí bate a dúvida: faço sozinho e levo horas? Contrato um freelancer e torço para entregar no prazo? Pago uma agência e estoura o orçamento do mês? Ou tento usar alguma ferramenta de IA e rezo para o resultado fazer sentido?

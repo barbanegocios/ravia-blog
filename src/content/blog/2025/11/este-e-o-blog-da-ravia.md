@@ -3,7 +3,7 @@ title: 'Este é o Blog da Ravia'
 description: 'Você trabalha 12, 14 horas por dia. Faz vendas, atende cliente, cuida do marketing, resolve o financeiro, ainda precisa postar nas redes sociais e quando sobra tempo (que nunca sobra), tenta pensar em como crescer o negócio.'
 pubDate: 2025-11-18
 category: negocios
-heroImage: '../../../../assets/ravia-app.jpg'
+heroImage: '../../../../assets/posts/ravia-app.jpg'
 ---
 
 Você trabalha 12, 14 horas por dia. Faz vendas, atende cliente, cuida do marketing, resolve o financeiro, ainda precisa postar nas redes sociais e quando sobra tempo (que nunca sobra), tenta pensar em como crescer o negócio. Se você se reconheceu nessa descrição, saiba que não está sozinho. Milhares de donos de microempresas brasileiras vivem esse mesmo corre todos os dias.

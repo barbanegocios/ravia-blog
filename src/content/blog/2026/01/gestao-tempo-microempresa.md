@@ -3,7 +3,7 @@ title: 'Gestão de tempo para microempresa: descubra onde suas 14 horas estão s
 description: 'Você acorda cedo, trabalha até tarde e ainda assim termina o dia com a sensação de que não saiu do lugar. As tarefas se acumulam, os e-mails não param de chagar e você está presente em cada decisão da empresa.'
 pubDate: 2026-01-06
 category: negocios
-heroImage: '../../../../assets/tempo-desperdicado-1.jpg'
+heroImage: '../../../../assets/posts/tempo-desperdicado-1.jpg'
 ---
 
 Você acorda cedo, trabalha até tarde e ainda assim termina o dia com a sensação de que não saiu do lugar. As tarefas se acumulam, os e-mails não param de chagar e você está presente em cada decisão da empresa. A gestão de tempo para microempresa virou um desafio diário: você passa 14 horas resolvendo urgências sem tocar nos projetos que realmente fariam o negócio crescer.
@@ -30,7 +30,7 @@ Esse comportamento não nasceu da desconfiança, mas da crença de que fazer voc
 
 O microgerenciamento também enfraquece sua equipe. As pessoas param de desenvolver autonomia porque sabem que você vai interferir de qualquer forma. Com o tempo, você cria uma dependência que torna impossível se desconectar do operacional, mesmo quando o negócio precisa que você esteja pensando no estratégico.
 
-![](../../../../assets/tempo-desperdicado-3.jpg)
+![](../../../../assets/posts/tempo-desperdicado-3.jpg)
 
 ### 2\. Falta de processos
 
@@ -66,7 +66,7 @@ Atividades de baixo impacto são aquelas que poderiam ser eliminadas, automatiza
 
 Depois de classificar, calcule quanto tempo você está dedicando a cada nível. Se mais de 60% do seu dia está em atividades de médio ou baixo impacto, você encontrou o motivo de trabalhar tanto e avançar tão pouco. A partir daqui, cada decisão sobre sua rotina deve aumentar o percentual de tempo dedicado ao que realmente move o negócio.
 
-![](../../../../assets/tempo-desperdicado-2.jpg)
+![](../../../../assets/posts/tempo-desperdicado-2.jpg)
 
 ### Passo 2: Identificar padrões de desperdício
 

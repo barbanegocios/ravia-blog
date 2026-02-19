@@ -3,7 +3,7 @@ title: 'Por que você está perdendo vendas por demora na resposta (e como resol
 description: 'Você investe em marketing para atrair leads. Esses contatos chegam interessados no seu produto. Mas muitos desistem antes mesmo de receber uma resposta da sua equipe.'
 pubDate: 2026-01-07
 category: marketing-digital
-heroImage: '../../../../assets/perder-vendas-demora-resposta-4.jpg'
+heroImage: '../../../../assets/posts/perder-vendas-demora-resposta-4.jpg'
 ---
 
 Você investe em marketing para atrair leads. Esses contatos chegam interessados no seu produto. Mas muitos desistem antes mesmo de receber uma resposta da sua equipe.
@@ -22,7 +22,7 @@ Estudos mostram que leads contatados em até 5 minutos têm 21 vezes mais chance
 
 Enquanto você demora, a concorrência age. Empresas que respondem rapidamente capturam oportunidades que eram suas. O lead não é mais paciente porque tem dezenas de alternativas a um clique de distância.
 
-![](../../../../assets/perder-vendas-demora-resposta-3.jpg)
+![](../../../../assets/posts/perder-vendas-demora-resposta-3.jpg)
 
 O custo dessa demora vai além da venda perdida. Você desperdiçou o investimento em anúncios, landing pages e toda a jornada até aquele contato. Cada lead ignorado representa dinheiro jogado fora sem retorno.
 
@@ -38,7 +38,7 @@ Equipes pequenas tentam fazer tudo manualmente. O vendedor precisa checar múlti
 
 Sem ferramentas adequadas, não há como identificar leads quentes. Todos os contatos entram na mesma fila, independente do nível de interesse. Quem estava pronto para comprar espera tanto quanto quem só pediu informações básicas.
 
-![](../../../../assets/perder-vendas-demora-resposta-1.jpg)
+![](../../../../assets/posts/perder-vendas-demora-resposta-1.jpg)
 
 A sobrecarga da equipe agrava o problema. Vendedores atendem clientes atuais, fazem follow-ups e ainda precisam prospectar. Leads novos ficam para depois porque não há tempo nem sistema para priorizá-los.
 
@@ -56,7 +56,7 @@ Respostas automáticas podem incluir informações básicas sobre o próximo pas
 
 A automação não substitui o atendimento humano. Ela apenas ganha tempo para que sua equipe responda de forma mais estratégica. O primeiro contato rápido evita que o lead procure a concorrência.
 
-![](../../../../assets/perder-vendas-demora-resposta-2.jpg)
+![](../../../../assets/posts/perder-vendas-demora-resposta-2.jpg)
 
 ### **2\. Definição de SLA de atendimento**
 
