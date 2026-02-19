@@ -10,56 +10,168 @@ import logo from '../assets/logo.png';
 		<Image src={logo} alt="" height={40} class="logo-img" />
 	</a>
 
-	<button
-		type="button"
-		class="hamburger"
-		aria-label="Abrir menu"
-		aria-expanded="false"
-		aria-controls="nav-links"
-	>
-		<svg
-			class="hamburger-icon"
-			viewBox="0 0 24 24"
-			width="24"
-			height="24"
-			aria-hidden="true"
-		>
-			<path
-				fill="currentColor"
-				d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-			/>
-		</svg>
-	</button>
+	<div class="topbar-right">
+		<div class="search-wrapper" role="search">
+			<button
+				type="button"
+				class="search-trigger"
+				aria-label="Buscar"
+				aria-expanded="false"
+				aria-controls="search-expanded"
+			>
+				<svg
+					class="search-icon"
+					viewBox="0 0 24 24"
+					width="24"
+					height="24"
+					aria-hidden="true"
+				>
+					<path
+						fill="currentColor"
+						d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+					/>
+				</svg>
+			</button>
+			<div id="search-expanded" class="search-expanded" aria-hidden="true">
+				<input
+					type="search"
+					class="search-input"
+					placeholder="Buscar artigos..."
+					autocomplete="off"
+					aria-label="Buscar artigos"
+				/>
+			</div>
+		</div>
 
-	<nav id="nav-links" class="nav-links">
-		{CATEGORIES.map((cat) => (
-			<HeaderLink href={`/categoria/${cat.slug}`} class="nav-link">
-				{cat.label}
-			</HeaderLink>
-		))}
-		<a href="https://ravia.app/" class="nav-link nav-link-cta">
-			Conheça o PostCreator
-		</a>
-	</nav>
+		<button
+			type="button"
+			class="hamburger"
+			aria-label="Abrir menu"
+			aria-expanded="false"
+			aria-controls="nav-links"
+		>
+			<svg
+				class="hamburger-icon"
+				viewBox="0 0 24 24"
+				width="24"
+				height="24"
+				aria-hidden="true"
+			>
+				<path
+					fill="currentColor"
+					d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+				/>
+			</svg>
+		</button>
+
+		<nav id="nav-links" class="nav-links">
+			{CATEGORIES.map((cat) => (
+				<HeaderLink href={`/categoria/${cat.slug}`} class="nav-link">
+					{cat.label}
+				</HeaderLink>
+			))}
+			<a href="https://ravia.app/" class="nav-link nav-link-cta">
+				Conheça o PostCreator
+			</a>
+		</nav>
+	</div>
+
+	<div id="search-panel" class="search-panel" aria-hidden="true">
+		<input
+			type="search"
+			class="search-input search-input-panel"
+			placeholder="Buscar artigos..."
+			autocomplete="off"
+			aria-label="Buscar artigos"
+		/>
+	</div>
 </header>
 
 <script>
-	document
-		.querySelector('.hamburger')
-		?.addEventListener('click', function () {
-			const nav = document.getElementById('nav-links');
-			const btn = this as HTMLButtonElement;
-			if (!nav) return;
-			nav.classList.toggle('is-open');
-			btn.setAttribute(
-				'aria-expanded',
-				nav.classList.contains('is-open') ? 'true' : 'false'
-			);
-			btn.setAttribute(
-				'aria-label',
-				nav.classList.contains('is-open') ? 'Fechar menu' : 'Abrir menu'
-			);
+	function setupSearch() {
+		const trigger = document.querySelector('.search-trigger') as HTMLButtonElement;
+		const expanded = document.getElementById('search-expanded');
+		const inputDesktop = expanded?.querySelector('.search-input') as HTMLInputElement;
+		const panel = document.getElementById('search-panel');
+		const inputPanel = panel?.querySelector('.search-input') as HTMLInputElement;
+
+		if (!trigger || !expanded || !inputDesktop || !panel || !inputPanel) return;
+
+		const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+		function closeSearch() {
+			if (isMobile()) {
+				panel?.setAttribute('aria-hidden', 'true');
+				panel?.classList.remove('is-open');
+				inputPanel.value = '';
+			} else {
+				expanded?.classList.remove('is-expanded');
+				expanded?.setAttribute('aria-hidden', 'true');
+				trigger.setAttribute('aria-expanded', 'false');
+				inputDesktop.value = '';
+			}
+		}
+
+		function submitSearch(input: HTMLInputElement) {
+			const query = input.value.trim();
+			closeSearch();
+			window.location.href = `/busca?q=${encodeURIComponent(query)}`;
+		}
+
+		trigger.addEventListener('click', () => {
+			if (isMobile()) {
+				const nav = document.getElementById('nav-links');
+				nav?.classList.remove('is-open');
+				document.querySelector('.hamburger')?.setAttribute('aria-expanded', 'false');
+				panel?.classList.toggle('is-open');
+				panel?.setAttribute('aria-hidden', panel.classList.contains('is-open') ? 'false' : 'true');
+				trigger.setAttribute('aria-expanded', panel?.classList.contains('is-open') ? 'true' : 'false');
+				if (panel?.classList.contains('is-open')) inputPanel.focus();
+			} else {
+				expanded?.classList.toggle('is-expanded');
+				const open = expanded?.classList.contains('is-expanded');
+				expanded?.setAttribute('aria-hidden', open ? 'false' : 'true');
+				trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+				if (open) inputDesktop.focus();
+			}
 		});
+
+		inputDesktop.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				closeSearch();
+				trigger.focus();
+			} else if (e.key === 'Enter') {
+				e.preventDefault();
+				submitSearch(inputDesktop);
+			}
+		});
+
+		inputPanel.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				closeSearch();
+				trigger.focus();
+			} else if (e.key === 'Enter') {
+				e.preventDefault();
+				submitSearch(inputPanel);
+			}
+		});
+
+		document.addEventListener('click', (e) => {
+			const target = e.target as Node;
+			const outside =
+				!expanded?.contains(target) &&
+				!panel?.contains(target) &&
+				!trigger?.contains(target);
+			if (
+				outside &&
+				(expanded?.classList.contains('is-expanded') || panel?.classList.contains('is-open'))
+			) {
+				closeSearch();
+			}
+		});
+	}
+
+	setupSearch();
 </script>
 
 <style>
@@ -84,6 +196,93 @@ import logo from '../assets/logo.png';
 		height: 40px;
 		width: auto;
 		display: block;
+	}
+
+	.topbar-right {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.search-wrapper {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	.search-trigger {
+		background: transparent;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		padding: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.search-trigger:hover {
+		opacity: 0.9;
+	}
+
+	.search-icon {
+		display: block;
+	}
+
+	.search-expanded {
+		width: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		transition: width 0.2s ease;
+	}
+
+	.search-expanded.is-expanded {
+		width: 260px;
+		margin-left: 0.25rem;
+	}
+
+	.search-input {
+		width: 100%;
+		min-width: 0;
+		padding: 0.4rem 0.6rem;
+		font-size: 0.9rem;
+		color: #fff;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 6px;
+		font-family: inherit;
+	}
+
+	.search-input::placeholder {
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.search-input:focus {
+		outline: none;
+		border-color: #e2a000;
+	}
+
+	.search-panel {
+		display: none;
+		position: fixed;
+		top: 64px;
+		left: 0;
+		right: 0;
+		background: #001e3c;
+		padding: 1em;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+		z-index: 100;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.search-panel.is-open {
+		display: flex;
+	}
+
+	.search-input-panel {
+		width: 100%;
 	}
 
 	.nav-links {

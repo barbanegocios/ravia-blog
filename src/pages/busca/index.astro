@@ -1,0 +1,148 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<BaseHead
+			title={`Busca | ${SITE_TITLE}`}
+			description={SITE_DESCRIPTION}
+		/>
+		<style>
+			.search-empty {
+				text-align: center;
+				color: rgb(var(--gray));
+				padding: 2rem;
+				font-size: 1.1rem;
+			}
+			.search-loading {
+				text-align: center;
+				color: rgb(var(--gray));
+				padding: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main class="main-home">
+			<div class="main-inner">
+				<div class="hero-text">
+					<h1 id="search-title">Resultados da busca</h1>
+					<p class="tagline" id="search-tagline">{SITE_DESCRIPTION}</p>
+				</div>
+				<p class="search-loading" id="search-loading">Carregando...</p>
+				<ul class="post-list" id="search-results" aria-live="polite" hidden></ul>
+				<p class="search-empty" id="search-empty" hidden></p>
+			</div>
+		</main>
+		<Footer />
+		<script>
+			const MIN_QUERY_LENGTH = 2;
+
+			function normalize(str) {
+				return str
+					.toLowerCase()
+					.normalize('NFD')
+					.replace(/[\u0300-\u036f]/g, '');
+			}
+
+			function search(index, query) {
+				const q = normalize(query.trim());
+				if (q.length < MIN_QUERY_LENGTH) return [];
+				const terms = q.split(/\s+/).filter(Boolean);
+				return index.filter((item) => {
+					const title = normalize(item.title);
+					const desc = normalize(item.description);
+					const cat = normalize(item.category);
+					const catLabel = normalize(item.categoryLabel);
+					const body = normalize(item.bodyPlain || '');
+					const searchable = `${title} ${desc} ${cat} ${catLabel} ${body}`;
+					return terms.every((t) => searchable.includes(t));
+				});
+			}
+
+			function escapeHtml(text) {
+				const div = document.createElement('div');
+				div.textContent = text;
+				return div.innerHTML;
+			}
+
+			function renderCards(results, query) {
+				const list = document.getElementById('search-results');
+				const empty = document.getElementById('search-empty');
+				const loading = document.getElementById('search-loading');
+				const titleEl = document.getElementById('search-title');
+				const taglineEl = document.getElementById('search-tagline');
+
+				if (!list || !empty || !loading || !titleEl) return;
+
+				loading.hidden = true;
+
+				const q = (query || '').trim();
+				titleEl.textContent = q
+					? `Resultados da busca para "${escapeHtml(q)}"`
+					: 'Resultados da busca';
+				if (taglineEl) {
+					taglineEl.textContent =
+						results.length === 1
+							? '1 artigo encontrado'
+							: `${results.length} artigos encontrados`;
+				}
+
+				if (results.length === 0) {
+					list.hidden = true;
+					empty.hidden = false;
+					empty.textContent =
+						q.length >= MIN_QUERY_LENGTH
+							? 'Nenhum resultado encontrado. Tente outros termos.'
+							: 'Digite pelo menos 2 caracteres na busca.';
+					return;
+				}
+
+				empty.hidden = true;
+				list.hidden = false;
+				list.innerHTML = results
+					.map(
+						(item, index) => `
+					<li class="post-card">
+						<a href="/${escapeHtml(item.id)}/" class="card-link">
+							${item.heroImageSrc ? `<img src="${escapeHtml(item.heroImageSrc)}" alt="" class="card-image" loading="${index === 0 ? 'eager' : 'lazy'}" width="600" height="338" />` : ''}
+							<div class="card-body">
+								<div class="card-category">${escapeHtml(item.categoryLabel)}</div>
+								<h2 class="card-title">${escapeHtml(item.title)}</h2>
+								<p class="card-excerpt">${escapeHtml(item.description)}</p>
+								<span class="read-more">Ler artigo →</span>
+							</div>
+						</a>
+					</li>
+				`
+					)
+					.join('');
+			}
+
+			(async function () {
+				const params = new URLSearchParams(window.location.search);
+				const q = params.get('q')?.trim() ?? '';
+
+				let index = [];
+				try {
+					const res = await fetch('/search-index.json');
+					index = await res.json();
+				} catch (e) {
+					document.getElementById('search-loading').hidden = true;
+					document.getElementById('search-empty').hidden = false;
+					document.getElementById('search-empty').textContent =
+						'Não foi possível carregar a busca. Tente novamente.';
+					return;
+				}
+
+				const results = search(index, q);
+				renderCards(results, q);
+			})();
+		</script>
+	</body>
+</html>
