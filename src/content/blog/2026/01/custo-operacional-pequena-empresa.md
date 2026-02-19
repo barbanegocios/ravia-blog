@@ -78,4 +78,4 @@ O momento certo para investir em ferramentas é quando o custo do seu tempo supe
 
 O custo operacional de pequena empresa se torna insustentável quando você tenta abraçar todas as tarefas sozinho. Seu tempo tem valor financeiro concreto, e desperdiçá-lo em atividades operacionais reduz sua capacidade de crescimento. Entender esses números permite decisões que transformam sua rotina e seus resultados.
 
-[_**A Ravia automatiza processos financeiros e operacionais para você recuperar seu tempo e focar no que realmente importa. Teste gratuitamente e descubra quanto você pode economizar.**_](https://ravia.app/?utm_source=blog&utm_campaign=trial&utm_medium=org&utm_content=cta&utm_term=custo-operacional-pequena-empresa)
+[_**A Ravia automatiza processos financeiros e operacionais para você recuperar seu tempo e focar no que realmente importa. Teste gratuitamente e descubra quanto você pode economizar.**_](https://ravia.app/[cta_utm])

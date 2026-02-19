@@ -4,6 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import UtmResolver from '../components/UtmResolver.astro';
 import { getCategoryLabel } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -119,5 +120,6 @@ const { title, description, heroImage, category } = Astro.props;
 			</article>
 		</main>
 		<Footer />
+		<UtmResolver />
 	</body>
 </html>
