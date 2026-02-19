@@ -4,7 +4,7 @@ export const BANNERS = [
 	{
 		id: 'banner_top',
 		image: bannerTop,
-		link: 'https://ravia.app/',
+		link: 'https://ravia.app/?utm_source=blog&utm_campaign=trial&utm_medium=org&utm_content=home&utm_term=banner-top',
 	},
 ] as const;
 
