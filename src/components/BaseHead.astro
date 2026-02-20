@@ -28,19 +28,7 @@ const ogImageUrl = new URL(image.src, Astro.url);
 const googleFontsUrl =
 	'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600&display=swap';
 
-const GA_MEASUREMENT_ID = 'G-EZD8EHSL9R';
 ---
-
-<!-- Google Analytics 4 (gtag.js): dataLayer e gtag definidos antes do script externo -->
-<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
-	gtag('config', GA_MEASUREMENT_ID);
-</script>
-<script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} async></script>
 
 <!-- Tema: segue o sistema (prefers-color-scheme); override via localStorage 'theme' = 'light' | 'dark' -->
 <script is:inline>
@@ -71,8 +59,7 @@ const GA_MEASUREMENT_ID = 'G-EZD8EHSL9R';
 />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Google Fonts: carregamento assíncrono (não bloqueia a renderização) -->
-<link rel="preconnect" href="https://www.googletagmanager.com" />
+<!-- Google Fonts: carregamento assíncrono (não bloqueia a renderização). Preconnect só para fontes (GA carrega no final do body). -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link

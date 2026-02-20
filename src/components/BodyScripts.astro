@@ -1,0 +1,15 @@
+---
+// Scripts no final do body para não bloquear o primeiro paint (LCP). Inclui GA e outros.
+const GA_MEASUREMENT_ID = 'G-EZD8EHSL9R';
+---
+
+<!-- Google Analytics 4: carregado após o conteúdo para não competir com o caminho crítico -->
+<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', GA_MEASUREMENT_ID);
+</script>
+<script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} async></script>

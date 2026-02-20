@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import UtmResolver from '../components/UtmResolver.astro';
+import BodyScripts from '../components/BodyScripts.astro';
 import { getCategoryLabel } from '../consts';
 import authorAvatar from '../assets/daniel-sao-pedro.jpg';
 
@@ -153,5 +154,6 @@ const { title, description, heroImage, category, author, pubDate, updatedDate } 
 		</main>
 		<Footer />
 		<UtmResolver />
+		<BodyScripts />
 	</body>
 </html>

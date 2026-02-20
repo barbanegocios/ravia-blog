@@ -12,6 +12,10 @@ import {
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://blog.ravia.app',
+	build: {
+		// Elimina a cadeia crítica HTML → CSS: o CSS vai inline no HTML e melhora LCP no mobile (PageSpeed Insights).
+		inlineStylesheets: 'always',
+	},
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		rehypePlugins: [

@@ -2,7 +2,7 @@ Ravia Blog
 Ravia
 Marketing inteligente para quem não tem tempo a perder
 
-Generated on 2026-02-20T18:56:07.602Z
+Generated on 2026-02-20T19:33:47.729Z
 Contains the markdown content of each blog post.
 UTM placeholders in links (e.g. [cta_utm]) are expanded to full URLs with utm_term = post slug.
 

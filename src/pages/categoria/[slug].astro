@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseHead from '../../components/BaseHead.astro';
+import BodyScripts from '../../components/BodyScripts.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import { CATEGORIES, getCategoryLabel, SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
@@ -80,5 +81,6 @@ const posts = allPosts
 			</div>
 		</main>
 		<Footer />
+		<BodyScripts />
 	</body>
 </html>
