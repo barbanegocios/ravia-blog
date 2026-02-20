@@ -1,4 +1,4 @@
-import bannerTop from '../assets/banners/banner_top.jpg';
+import bannerTop from '../assets/banners/banner_top.png';
 
 export const BANNERS = [
 	{
@@ -9,17 +9,17 @@ export const BANNERS = [
 	/** Banners inline: imagens ficam só em public/ (rehype injeta HTML com URL pública) */
 	{
 		id: 'banner_inline_1',
-		imagePublicPath: '/banner_middle-1.jpg',
+		imagePublicPath: '/banner_middle-1.png',
 		link: 'https://ravia.app/[banner_inline_utm]',
 	},
 	{
 		id: 'banner_inline_2',
-		imagePublicPath: '/banner_middle-2.jpg',
+		imagePublicPath: '/banner_middle-2.png',
 		link: 'https://ravia.app/[banner_inline_utm]',
 	},
 	{
 		id: 'banner_inline_3',
-		imagePublicPath: '/banner_middle-3.jpg',
+		imagePublicPath: '/banner_middle-3.png',
 		link: 'https://ravia.app/[banner_inline_utm]',
 	},
 ] as const;

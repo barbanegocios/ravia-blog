@@ -29,7 +29,7 @@ Toda a configuração fica em **`src/data/banners.ts`**.
 2. No topo de `src/data/banners.ts`, importe a imagem:
 
    ```ts
-   import bannerTop from '../assets/banner_top.jpg';
+   import bannerTop from '../assets/banner_top.png';
    import meuBanner from '../assets/meu-banner.jpg';
    ```
 
@@ -45,7 +45,7 @@ Toda a configuração fica em **`src/data/banners.ts`**.
    - **`id`**: identificador único (use em `BANNER_PLACEMENTS`).
    - **`image`**: resultado do `import` da imagem (o build do Astro otimiza e gera a URL).
    - **`link`**: URL para onde o clique no banner leva (mesma aba).
-   - **`imagePublicPath`** (opcional): para banners que aparecem **dentro dos artigos**, defina o caminho da imagem em `public/` (ex.: `'/banner_middle-1.jpg'`). Esses banners não usam `image` (import); as imagens ficam **só em `public/`** (pode mover de `src/assets/banners/` para `public/`).
+   - **`imagePublicPath`** (opcional): para banners que aparecem **dentro dos artigos**, defina o caminho da imagem em `public/` (ex.: `'/banner_middle-1.png'`). Esses banners não usam `image` (import); as imagens ficam **só em `public/`** (pode mover de `src/assets/banners/` para `public/`).
 
 #### Exibir na home
 
@@ -102,7 +102,7 @@ O grupo `banner_inline_utm` (ou o que você definir em `utm.ts`) deve ter `utm_s
 | **`src/pages/index.astro`** | Filtra os banners com `placement` na home e renderiza `<Banner>` entre o hero e a lista de posts. |
 | **`src/layouts/BlogPost.astro`** | Contém os estilos da classe `.banner-in-article` para os banners injetados no meio do texto. |
 
-Na home, o Astro usa o componente `Banner.astro` e o otimizador de imagens. Nos artigos, o rehype injeta HTML (com a URL da imagem já resolvida no build). Para os banners in-article aparecerem em **produção**, as imagens ficam apenas em `public/` e o banner tem `imagePublicPath` (ex.: `'/banner_middle-1.jpg'`). Não é preciso ter essas imagens em `src/assets/` — pode mover de `src/assets/banners/` para `public/`. Caso contrário o build gera `src="/src/assets/..."`, que só funciona no dev server e resulta em 404 ao vivo.
+Na home, o Astro usa o componente `Banner.astro` e o otimizador de imagens. Nos artigos, o rehype injeta HTML (com a URL da imagem já resolvida no build). Para os banners in-article aparecerem em **produção**, as imagens ficam apenas em `public/` e o banner tem `imagePublicPath` (ex.: `'/banner_middle-1.png'`). Não é preciso ter essas imagens em `src/assets/` — pode mover de `src/assets/banners/` para `public/`. Caso contrário o build gera `src="/src/assets/..."`, que só funciona no dev server e resulta em 404 ao vivo.
 
 ---
 
@@ -110,7 +110,7 @@ Na home, o Astro usa o componente `Banner.astro` e o otimizador de imagens. Nos 
 
 ```ts
 // src/data/banners.ts
-import bannerTop from '../assets/banner_top.jpg';
+import bannerTop from '../assets/banner_top.png';
 import ctaSidebar from '../assets/cta-sidebar.png';
 
 export const BANNERS = [
